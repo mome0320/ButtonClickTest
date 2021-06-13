@@ -1,0 +1,16 @@
+{
+  "name": "button_clicktest",
+  "version": "1.0.0",
+  "description": "버튼 반응 속도 볼려고 단순히 만든 봇 스크립트",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MoartMedia <u.hello@kakao.com> (http://twitter.com/mome0320)",
+  "license": "ISC",
+  "dependencies": {
+    "discord-interactions": "^2.1.0",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1"
+  }
+}
