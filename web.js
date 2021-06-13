@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
 })
 app.post('/discord/buttons',verifyKeyMiddleware(public_key), async (req, res) => {
    const data = req.body;
-   console.log(data);
     if(data.data.custom_id === "speedTest"){
        if(!count.has(data.message.id)) count.set(data.message.id,{val:0})
 	const _count = count.get(data.message.id).val++;
@@ -31,7 +30,11 @@ app.post('/discord/buttons',verifyKeyMiddleware(public_key), async (req, res) =>
         },
         type:7
       });
-    }
+    }else{
+	res.status(404).json({
+	data: 'NOT_FOUND'
+	})
+}
 })
 
 app.listen(WEBPORT, () => {
